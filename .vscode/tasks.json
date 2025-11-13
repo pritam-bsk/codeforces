@@ -1,34 +1,23 @@
 {
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "type": "cppbuild",
-            "label": "codeforces build g++-15",
-            "command": "/opt/homebrew/bin/g++-15",
-            "args": [
-                "-std=c++17",
-                "-O2",
-                "${file}",
-                "-o",
-                "${fileDirname}/a.out"
-            ],
-            "options": {
-                "cwd": "${fileDirname}"
-            },
-            "problemMatcher": [
-                "$gcc"
-            ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "detail": "Compiles current file using Homebrew GCC 15"
-        },
-        {
-            "label": "Run a.out",
-            "type": "shell",
-            "command": "${fileDirname}/a.out",
-            "group": "none"
-        }
-    ]
+  "version": "2.0.0",
+  "tasks": [
+    {
+  "label": "Build and Run with I/O",
+  "type": "shell",
+  "command": "g++-15 ${file} -o ${fileDirname}/new.out && ${fileDirname}/new.out < ${fileDirname}/input.txt > ${fileDirname}/output.txt",
+  "group": {
+    "kind": "build",
+    "isDefault": true
+  },
+  "problemMatcher": [],
+  "presentation": {
+    "echo": false,
+    "reveal": "never",
+    "focus": false,
+    "panel": "shared"
+  }
 }
+  ]
+}
+
+// use g++ *.cpp -o sorting to run all

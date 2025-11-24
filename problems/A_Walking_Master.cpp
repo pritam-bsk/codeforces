@@ -17,6 +17,7 @@ int32_t main()
         int a,b,c,d; cin >> a >> b >> c >> d;
         // eq: x-y+b-a = 0
         if(c-d+b-a > 0) cout << -1 << endl;
+        else if(d < b) cout << -1 << endl;
         else{
             int y_dist = abs(d-b);
             int x_dist = abs(a+d-b-c);

@@ -1,1 +1,1 @@
-g++-15 -std=c++17 -O2 template.cpp -o main && ./main
+g++-15 -std=c++20 -O2 template.cpp -o main && ./main

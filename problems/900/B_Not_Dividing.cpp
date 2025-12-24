@@ -14,7 +14,25 @@ int32_t main()
     cin >> t;
     while (t--)
     {
-        
+        int n;
+        cin >> n;
+        vector<int> a(n);
+        for (auto &ele : a)
+            cin >> ele;
+        for (int i = 0; i < n - 1; i++)
+        {
+            a[i] += (a[i] == 1);
+        }
+        for (int i = 0; i < n - 1; i++)
+        {
+            if (a[i + 1] % a[i] == 0)
+            {
+                a[i + 1]++;
+            }
+        }
+        for (auto &ele : a)
+            cout << ele << " ";
+        cout << endl;
     }
     return 0;
 }

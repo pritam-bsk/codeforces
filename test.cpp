@@ -1,21 +1,10 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <math.h>
 using namespace std;
-#define fastio                   \
-    ios::sync_with_stdio(false); \
-    cin.tie(0);
-#define int long long
-#define yes cout << "YES\n";
-#define no cout << "NO\n";
 
-int32_t main()
-{
-    fastio;
-    int t = 1;
-    // cin >> t;
-    while (t--)
-    {
-        cout << "hello" << endl;
-        
-    }
-    return 0;
+int main(){
+    int n = 10;
+    cout << 
+    5 - pow(-1, ((int)((n - 1) / 2)))*(n-1) - pow(-1, ((int)(n / 2)))*n - 2 
+    << endl;
 }
